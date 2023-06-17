@@ -1,4 +1,4 @@
-#!/bin/bash
+Here is the Create WordPress Website using Bash Scripts
 
 # Function to check if a command is available
 command_exists() {
@@ -93,3 +93,13 @@ if [ "$2" = "delete" ]; then
     rm -rf "$site_name"
     echo "The site has been deleted."
 fi
+
+Save the above script in a file named wordpress.sh, and make it executable using the following command:
+chmod +x wordpress.sh
+
+Now you can run the script with the following command:
+./wordpress.sh <site-name> [enable/disable/delete]
+
+Replace <site-name> with the desired name for your WordPress site. The optional second argument [enable/disable/delete] can be used to enable, disable, or delete the site.
+
+Please note that this script assumes you have sufficient permissions to install packages and modify system files. Also, make sure to run the script with appropriate privileges when necessary (e.g., using sudo).
