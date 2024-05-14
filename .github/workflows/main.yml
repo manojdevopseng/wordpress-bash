@@ -1,0 +1,20 @@
+name: Backup Main Branch
+
+on:
+  schedule:
+    - cron: '*/3 * * * *'  # Runs every 3 minutes
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Backup Main branch
+        run: |
+          git config --local user.email "kumar.manoj8527387747@gmail.com"
+          git config --local user.name "manojdevopseng"
+          git checkout Main
+          git push origin Main
